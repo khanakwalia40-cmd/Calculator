@@ -6,6 +6,22 @@ function Calculator() {
   const [operation, setOperation] = useState("Add");
   const [results, setResults] = useState([]);
 
+  function handleCalculate() {
+    const a = Number(num1);
+    const b = Number(num2);
+    let result = 0;
+
+    if (operation === "Add") {
+      result = a + b;
+    } else if (operation === "Subtract") {
+      result = a - b;
+    } else if (operation === "Multiply") {
+      result = a * b;
+    }
+
+    setResults([...results, result]);
+  }
+
   return (
     <div>
       <input
@@ -31,7 +47,7 @@ function Calculator() {
         <option value="Multiply">Multiply</option>
       </select>
 
-      <button>Perform Action</button>
+      <button onClick={handleCalculate}>Perform Action</button>
 
       <ul>
         {results.map((res, index) => (
