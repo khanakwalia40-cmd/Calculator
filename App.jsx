@@ -1,3 +1,4 @@
+// App.jsx
 import Calculator from "./Calculator";
 
 function App() {
