@@ -1,3 +1,4 @@
+// Calculator.jsx
 import { useState } from "react";
 
 function Calculator() {
